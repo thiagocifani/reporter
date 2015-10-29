@@ -8,20 +8,9 @@ class ReportBuffer
   end
 
   def save
-    report.template   = jrxml_to_file
-    report.name       = name
-    report.collection = collection
-    report.save
+    report.update_attributes(template: jrxml, name: name,
+                             collection: collection)
     report
-  end
-
-  def jrxml_to_file
-    if name
-      content = Base64.decode64(jrxml).force_encoding('UTF-8')
-      filename = [Rails.root, "#{name}.jrxml"].join('/')
-      File.open(filename, 'w') { |f| f.write(content) }
-      filename
-    end
   end
 
   def report
