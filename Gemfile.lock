@@ -1,5 +1,6 @@
-PATH
-  remote: ../jasper-on-rails-pdf
+GIT
+  remote: git://github.com/thiagocifani/jasper-on-rails-pdf.git
+  revision: 78cff74eeceabb453425b56200ebe67a39e36d75
   specs:
     jasper-on-rails-pdf (0.0.1)
       nokogiri

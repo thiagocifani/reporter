@@ -9,7 +9,7 @@ group :development, :test do
   gem 'pry'
 end
 
-gem 'jasper-on-rails-pdf', path: "../jasper-on-rails-pdf"
+gem 'jasper-on-rails-pdf', github: "thiagocifani/jasper-on-rails-pdf"
 
 group :development do
   gem 'web-console', '~> 2.0'
