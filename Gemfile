@@ -5,6 +5,7 @@ ENV['JAVA_HOME'] = java_home if Dir.exist?(java_home)
 
 gem 'rails', '4.2.4'
 gem 'pg'
+gem 'puma'
 gem 'responders'
 gem 'sass-rails'
 gem 'uglifier'
