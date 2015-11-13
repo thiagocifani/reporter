@@ -10,6 +10,7 @@ gem 'responders'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'pry'
