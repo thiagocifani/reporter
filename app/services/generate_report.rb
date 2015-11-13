@@ -1,12 +1,13 @@
  require "open-uri"
 
 class GenerateReport
-  attr_reader :tempfile, :report
+  attr_reader :tempfile, :report, :pages
 
   def initialize(id)
     @report = Report.find id
     @tempfile = Tempfile.new([@report.name, ".jrxml"],
                              enconding: "ascii-8bit")
+    @pages = report.pages
   end
 
   def render
@@ -22,7 +23,9 @@ class GenerateReport
   end
 
   def content
-    report.collection
+    pages.inject([]) do |sum, page|
+      sum += JSON.parse(page.gsub('=>', ':'))
+    end
   end
 
   def check_uri

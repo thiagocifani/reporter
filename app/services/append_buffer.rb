@@ -7,7 +7,7 @@ class AppendBuffer
   end
 
   def add_to_collection
-    @buffer.collection += page
+    @buffer.pages << page
     @buffer.save
     @buffer
   end
