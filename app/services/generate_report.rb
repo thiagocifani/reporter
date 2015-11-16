@@ -11,9 +11,10 @@ class GenerateReport
   end
 
   def render
-    report = JasperOnRailsPdf::PdfGenerator.new(jrxml, content).render
+    pdf = JasperOnRailsPdf::PdfGenerator.new(jrxml, content).render
     close
-    report
+    report.destroy
+    pdf
   end
 
   private
