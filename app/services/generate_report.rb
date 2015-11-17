@@ -25,7 +25,7 @@ class GenerateReport
 
   def content
     pages.inject([]) do |sum, page|
-      sum += JSON.parse(page.gsub('=>', ':'))
+      sum.concat(Marshal.load(page))
     end
   end
 

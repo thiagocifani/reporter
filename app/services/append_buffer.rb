@@ -2,7 +2,7 @@ class AppendBuffer
   attr_reader :id, :page
 
   def initialize(id, page, store: Report)
-    @page   = page
+    @page   = Marshal.dump(page)
     @buffer = store.find(id)
   end
 
