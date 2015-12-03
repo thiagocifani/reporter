@@ -22,11 +22,14 @@ group :development, :test do
   gem 'pry'
 end
 
-gem 'jasper-on-rails-pdf', github: "thiagocifani/jasper-on-rails-pdf"
+#gem 'jasper-on-rails-pdf', github: "thiagocifani/jasper-on-rails-pdf"
 
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'capistrano', '~> 3.0.0'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
 end
 
 group :development, :test do
