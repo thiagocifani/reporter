@@ -27,8 +27,8 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'capistrano', '~> 3.0.0'
-  gem 'capistrano-rails'
+  gem 'capistrano', '~> 3.1'
+  gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-bundler'
 end
 
