@@ -10,7 +10,7 @@ set :scm, :git
 # set :log_level, :debug
 # set :pty, true
 set :linked_files, %w{config/database.yml}
-set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system config/puma/production.rb}
 
 set :default_env, { path: "/opt/ruby/bin:$PATH" }
 set :keep_releases, 5
