@@ -15,7 +15,7 @@ gem 'oj'
 gem 'oj_mimic_json'
 gem 'ruby-prof'
 gem 'redis', '~> 3.0.1'
-gem 'hiredis', '~> 0.4.5'
+gem 'hiredis'
 gem 'redis-objects'
 
 group :development, :test do
